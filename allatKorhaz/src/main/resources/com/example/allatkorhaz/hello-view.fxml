@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Állat kezelésének típusa" textAlignment="CENTER">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Text>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kezelésnek típusa" />
+                                <ChoiceBox prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: #9EDE8B; -fx-border-width: 3; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                            </children>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" style="-fx-border-width: 3; -fx-border-color: #9EDE8B; -fx-border-radius: 10; -fx-background-radius: 10;">
+                    <items>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <ListView prefHeight="200.0" prefWidth="172.0" style="-fx-background-color: none;">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin></ListView>
+                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kezelő orvos">
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font></Text>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Nagy Károly">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font></Text>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum" />
+                                        <TextField editable="false" maxWidth="150.0" style="-fx-background-color: none; -fx-border-color: #9EDE8B; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;">
+                                            <padding>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children></VBox>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Leírás" />
+                                <TextArea prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #9EDE8B; -fx-border-radius: 10; -fx-border-width: 3; -fx-background-radius: 10;">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin></TextArea>
+                            </children>
+                        </VBox>
+                    </items>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </SplitPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" style="-fx-background-color: #9EDE8B;" text="&lt;">
+                    <HBox.margin>
+                        <Insets right="50.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" style="-fx-background-color: #9EDE8B;" text="&gt;" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
