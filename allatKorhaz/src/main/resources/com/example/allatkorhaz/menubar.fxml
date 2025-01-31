@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="30.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.allatkorhaz.MenuBarController">
+    <top>
+        <MenuBar prefHeight="30.0" style="-fx-background-color: #9EDE8B;">
+            <Menu text="Állatok">
+                <MenuItem fx:id="allatokMenuItem" onAction="#handleAllatok" text="Összes állat" />
+                <MenuItem fx:id="ujAllatMenuItem" onAction="#handleUjAllat" text="Állat rögzítése" />
+            </Menu>
+            <Menu text="Kezelések">
+                <MenuItem fx:id="kezelesKeresesMenuItem" onAction="#handleKezelesTipusai" text="Kezelések keresése" />
+                <MenuItem fx:id="kontrollVizsgalatMenuItem" onAction="#handleKontrollVizsgalat" text="Kontroll vizsgálatok" />
+            </Menu>
+            <Menu text="Statisztika">
+                <MenuItem fx:id="legjobbAllatorvosMenuItem" onAction="#handleLegjobbAllatorvos" text="Legjobb állatorvos" />
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <StackPane fx:id="contentPane" />
+    </center>
+</BorderPane>

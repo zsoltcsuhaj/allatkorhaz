@@ -1,64 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.HelloController">
    <children>
-       <MenuBar style="-fx-background-color: #9EDE8B;">
-           <menus>
-               <Menu mnemonicParsing="false" text="Állatok">
-                   <items>
-                       <MenuItem mnemonicParsing="false" text="Összes állat" />
-                       <MenuItem mnemonicParsing="false" text="Állat rögzítése" />
-                   </items>
-               </Menu>
-               <Menu mnemonicParsing="false" text="Kezelések">
-                   <items>
-                       <MenuItem mnemonicParsing="false" text="Kezelések típusai" />
-                       <MenuItem mnemonicParsing="false" text="Kontroll vizsgálatok" />
-                   </items>
-               </Menu>
-               <Menu mnemonicParsing="false" text="Statisztika">
-                   <items>
-                       <MenuItem mnemonicParsing="false" text="Legjobb állatorvos" />
-                   </items></Menu>
-           </menus>
-       </MenuBar>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A legjobb állatorvos" textAlignment="CENTER">
-         <VBox.margin>
-            <Insets top="10.0" />
-         </VBox.margin>
-      </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Nagy László">
-         <VBox.margin>
-            <Insets top="70.0" />
-         </VBox.margin>
-         <font>
-            <Font name="System Bold" size="32.0" />
-         </font>
-      </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kisállatgyógyászat">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <VBox.margin>
-            <Insets top="10.0" />
-         </VBox.margin>
-      </Text>
-      <Text fill="#6b6b6b" strokeType="OUTSIDE" strokeWidth="0.0" text="Belgyógyász">
-         <VBox.margin>
-            <Insets top="6.0" />
-         </VBox.margin>
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Text>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A legjobb állatorvos" textAlignment="CENTER">
+               <font>
+                  <Font name="Wide Latin" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Nagy László">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kisállatgyógyászat">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#6b6b6b" strokeType="OUTSIDE" strokeWidth="0.0" text="Belgyógyász">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
    </children>
-</VBox>
+</StackPane>
