@@ -11,25 +11,26 @@
 
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar prefHeight="6.0" prefWidth="600.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+       <MenuBar style="-fx-background-color: #9EDE8B;">
+           <menus>
+               <Menu mnemonicParsing="false" text="Állatok">
+                   <items>
+                       <MenuItem mnemonicParsing="false" text="Összes állat" />
+                       <MenuItem mnemonicParsing="false" text="Állat rögzítése" />
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Kezelések">
+                   <items>
+                       <MenuItem mnemonicParsing="false" text="Kezelések típusai" />
+                       <MenuItem mnemonicParsing="false" text="Kontroll vizsgálatok" />
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" text="Statisztika">
+                   <items>
+                       <MenuItem mnemonicParsing="false" text="Legjobb állatorvos" />
+                   </items></Menu>
+           </menus>
+       </MenuBar>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A legjobb állatorvos" textAlignment="CENTER">
          <VBox.margin>
             <Insets top="10.0" />
