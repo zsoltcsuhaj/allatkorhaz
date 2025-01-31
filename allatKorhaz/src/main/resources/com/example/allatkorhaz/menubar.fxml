@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="30.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.allatkorhaz.MenuBarController">
+<BorderPane prefHeight="30.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.MenuBarController">
     <top>
-        <MenuBar prefHeight="30.0" style="-fx-background-color: #9EDE8B;">
+        <MenuBar prefHeight="30.0" style="-fx-background-color: #9EDE8B;" BorderPane.alignment="CENTER_LEFT">
             <Menu text="Állatok">
                 <MenuItem fx:id="allatokMenuItem" onAction="#handleAllatok" text="Összes állat" />
                 <MenuItem fx:id="ujAllatMenuItem" onAction="#handleUjAllat" text="Állat rögzítése" />
