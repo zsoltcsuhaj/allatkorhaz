@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.HelloController">
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.AllatokController">
     <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="800.0">
         <children>
             <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Felvett állatok" textAlignment="CENTER">
@@ -13,13 +13,15 @@
                     <Font size="36.0" />
                 </font>
             </Text>
-          <TableView prefHeight="520.0" prefWidth="800.0">
+          <TableView fx:id="tableView" prefHeight="520.0" prefWidth="800.0">
                <columns>
-                  <TableColumn prefWidth="177.0" style="-fx-background-color: #9EDE8B;" text="Név" />
-                  <TableColumn minWidth="0.0" prefWidth="175.0" style="-fx-background-color: #9EDE8B;" text="Faj" />
-                  <TableColumn prefWidth="211.0" style="-fx-background-color: #9EDE8B;" text="Faj leírás" />
-                  <TableColumn prefWidth="123.0" style="-fx-background-color: #9EDE8B;" text="Nem" />
-                  <TableColumn minWidth="0.0" prefWidth="113.0" style="-fx-background-color: #9EDE8B;" text="Továbbiak" />
+                  <TableColumn fx:id="nevColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Név" />
+                  <TableColumn fx:id="fajColumn" minWidth="0.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Faj" />
+                  <TableColumn fx:id="fajtajellegColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Fajtajelleg" />
+                  <TableColumn fx:id="szuletesiDatumColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Születési Dátum" />
+               <TableColumn fx:id="gazdiNeveColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Gazdi Neve" />
+                  <TableColumn fx:id="gazdiElerhetosegeColumn" minWidth="0.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Gazdi Elérhetősége" />
+               <TableColumn fx:id="orvosiElozmenyekColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Orvosi Előzmények" />
                </columns>
             </TableView>
         </children>

@@ -48,7 +48,6 @@ public class UjAllatController {
     }
 
     public void initialize() {
-        conn = DatabaseConnection.getConnection();
     }
 
     public void hozzaadas() {
@@ -93,15 +92,30 @@ public class UjAllatController {
         }
 
         if (ok) {
-            String parancs = "INSERT INTO allat (nev, faj, fajtajelleg, szuletesi_datum, gazdi_neve, gazdi_elerhetosege, orvosi_elozmenyek)" + " VALUES ('" + nev + "', '" + fajta + "', '" + fajtajelleg + "', '" + selectedDate + "', '" + gnev + "', '" + gtel + "', '" + elozmeny + "')";
-            try {
-                Statement stmt = conn.createStatement();
-                stmt.executeUpdate(parancs);
+            String sql = "INSERT INTO allat (nev, faj, fajtajelleg, szuletesi_datum, gazdi_neve, gazdi_elerhetosege, orvosi_elozmenyek) VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+            try (Connection conn = DatabaseConnection.getConnection();
+                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+                // Prepared statement használata SQL injection ellen
+                pstmt.setString(1, nev);
+                pstmt.setString(2, fajta);
+                pstmt.setString(3, fajtajelleg);
+                pstmt.setDate(4, Date.valueOf(selectedDate));
+                pstmt.setString(5, gnev);
+                pstmt.setString(6, gtel);
+                pstmt.setString(7, elozmeny);
+
+                pstmt.executeUpdate();
+
                 Alert alertJo = new Alert(Alert.AlertType.INFORMATION, "Állat sikeresen hozzáadva!");
                 alertJo.show();
                 MenuBarController.getInstance().handleAllatok();
-            } catch (SQLException s) {
-                System.out.println(s.getMessage());
+
+            } catch (SQLException e) {
+                System.out.println("Adatbázis hiba: " + e.getMessage());
+                Alert alertHiba = new Alert(Alert.AlertType.ERROR, "Adatbázis hiba történt: " + e.getMessage());
+                alertHiba.show();
             }
         }
     }
