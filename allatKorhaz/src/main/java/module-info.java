@@ -8,7 +8,6 @@ module com.example.allatkorhaz {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
     requires java.sql;
 
     opens com.example.allatkorhaz to javafx.fxml;

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.HelloController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.HelloController">
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="800.0">
          <children>
             <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Kontroll vizsgálat" textAlignment="CENTER">
@@ -38,8 +38,8 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="166.0" prefWidth="401.0" spacing="10.0">
                            <children>
-                              <TextField prefWidth="400.0" style="-fx-border-color: #9EDE8B; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" />
-                              <TextField prefWidth="400.0" style="-fx-border-color: #9EDE8B; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" />
+                              <TextField fx:id="allatNeve" prefWidth="400.0" style="-fx-border-color: #9EDE8B; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" />
+                              <TextField fx:id="allatFajtaja" prefWidth="400.0" style="-fx-border-color: #9EDE8B; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" />
                               <TextField prefWidth="400.0" style="-fx-border-color: #9EDE8B; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" />
                               <TextArea prefHeight="100.0" prefWidth="364.0" style="-fx-border-color: #9EDE8B; -fx-border-width: 3; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: none;" />
                            </children>
@@ -68,7 +68,7 @@
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="774.0" spacing="20.0">
                            <children>
                               <Button mnemonicParsing="false" text="Az állatról" />
-                              <Button mnemonicParsing="false" text="Kezelés hozzáadása" />
+                              <Button fx:id="kezelesHozzaadasaButton" mnemonicParsing="false" text="Kezelés hozzáadása" />
                            </children>
                         </HBox>
                      </children>

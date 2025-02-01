@@ -15,7 +15,6 @@ public class HelloApplication extends Application implements IViews {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-
     }
 
     public static void main(String[] args) {

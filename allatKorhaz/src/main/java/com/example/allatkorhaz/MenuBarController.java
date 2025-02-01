@@ -30,27 +30,27 @@ public class MenuBarController implements IViews{
     }
 
     @FXML
-    private void handleUjAllat(){
+    public void handleUjAllat(){
         loadView(UJALLAT);
     }
     @FXML
-    private void handleLegjobbAllatorvos(){
+    public void handleLegjobbAllatorvos(){
         loadView(LEGJOBBALLATORVOS);
     }
     @FXML
-    private void handleKontrollVizsgalat(){
+    public void handleKontrollVizsgalat(){
         loadView(KONTROLLVIZSGALAT);
     }
     @FXML
-    private void handleKezelesTipusai(){
+    public void handleKezelesTipusai(){
         loadView(KEZELESTIPUSAI);
     }
     @FXML
-    private void handleKezelesHozzaadasa(){
+    public void handleKezelesHozzaadasa(){
         loadView(KEZELESHOZZAADASA);
     }
     @FXML
-    private void handleAllatok(){
+    public void handleAllatok(){
         loadView(ALLATOK);
     }
 
