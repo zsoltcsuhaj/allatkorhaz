@@ -99,6 +99,7 @@ public class UjAllatController {
                 stmt.executeUpdate(parancs);
                 Alert alertJo = new Alert(Alert.AlertType.INFORMATION, "Állat sikeresen hozzáadva!");
                 alertJo.show();
+                MenuBarController.getInstance().handleAllatok();
             } catch (SQLException s) {
                 System.out.println(s.getMessage());
             }

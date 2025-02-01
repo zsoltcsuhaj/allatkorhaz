@@ -11,10 +11,16 @@ public class MenuBarController implements IViews{
     @FXML
     private StackPane contentPane;
 
+    private static MenuBarController instance;
 
     @FXML
     public void initialize() {
+        instance = this;
         handleAllatok();
+    }
+
+    public static MenuBarController getInstance() {
+        return instance;
     }
     public void loadView(String fxmlfile){
         try{
