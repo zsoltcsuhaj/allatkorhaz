@@ -48,11 +48,11 @@
                      </VBox>
                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="401.0" spacing="10.0">
                         <children>
-                           <ComboBox fx:id="allatNevComboBox" prefHeight="25.0" prefWidth="397.0">
+                           <ComboBox fx:id="allatNevComboBox" prefHeight="25.0" prefWidth="397.0" promptText="Válasszon állatot!">
                               <VBox.margin>
                                  <Insets />
                               </VBox.margin></ComboBox>
-                           <ComboBox fx:id="orvosNevComboBox" prefHeight="25.0" prefWidth="396.0">
+                           <ComboBox fx:id="orvosNevComboBox" prefHeight="25.0" prefWidth="396.0" promptText="Válasszon állatorvost!">
                               <VBox.margin>
                                  <Insets top="15.0" />
                               </VBox.margin>

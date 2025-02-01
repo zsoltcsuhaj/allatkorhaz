@@ -50,14 +50,14 @@ public class KezelesHozzaadasaController {
 
     private void feltoltOrvosokComboBox() throws SQLException {
         ObservableList<String> orvosok = FXCollections.observableArrayList();
-        String query = "SELECT nev FROM allatorvosok ORDER BY nev";
+        String query = "SELECT nev, szakterulet FROM allatorvosok ORDER BY nev";
 
         try (Connection conn = DatabaseConnection.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
 
             while (rs.next()) {
-                orvosok.add(rs.getString("nev"));
+                orvosok.add(rs.getString("nev") + " - " + rs.getString("szakterulet"));
             }
             orvosNevComboBox.setItems(orvosok);
         }
@@ -96,7 +96,7 @@ public class KezelesHozzaadasaController {
     @FXML
     public void kezelesHozzaadas() {
         String allatNev = allatNevComboBox.getValue();
-        String orvosNev = orvosNevComboBox.getValue();
+        String orvosNevTeljes = orvosNevComboBox.getValue();
         String kezelesTipus = kezelesTipusaTextField.getText().trim();
         LocalDate datum = datumPicker.getValue();
         String megjegyzes = megjegyzesTextArea.getText().trim();
@@ -105,10 +105,13 @@ public class KezelesHozzaadasaController {
             showError("Válasszon ki egy állatot!");
             return;
         }
-        if (orvosNev == null || orvosNev.isEmpty()) {
+        if (orvosNevTeljes == null || orvosNevTeljes.isEmpty()) {
             showError("Válasszon ki egy állatorvost!");
             return;
         }
+
+        String orvosNev = orvosNevTeljes.split(" - ")[0];
+
         if (kezelesTipus.isEmpty() || kezelesTipus.length() > 32) {
             showError("A kezelés típusa nem lehet üres vagy 32 karakternél hosszabb!");
             return;
@@ -124,7 +127,7 @@ public class KezelesHozzaadasaController {
 
         try {
             Integer allatId = getAllatId(allatNev);
-            Integer orvosId = getAllatorvosId(orvosNev);
+            Integer orvosId = getAllatorvosId(orvosNev); // Most már csak a tiszta névvel keresünk
 
             if (allatId == null) {
                 showError("A kiválasztott állat nem található az adatbázisban!");

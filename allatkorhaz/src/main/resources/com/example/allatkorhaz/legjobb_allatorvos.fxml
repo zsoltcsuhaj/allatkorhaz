@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.HelloController">
+<StackPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.LegjobbOrvosController">
    <children>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
          <children>
@@ -16,21 +17,24 @@
                   <Insets bottom="50.0" />
                </VBox.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dr. Nagy László">
+            <Text fx:id="orvosNeveText" strokeType="OUTSIDE" strokeWidth="0.0">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kisállatgyógyászat">
+            <Text fx:id="orvosSzakTeruletText" strokeType="OUTSIDE" strokeWidth="0.0">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
-            <Text fill="#6b6b6b" strokeType="OUTSIDE" strokeWidth="0.0" text="Belgyógyász">
+            <Label fx:id="kezeleseinekSzama" style="-fx-font-weight: 700;">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
                <font>
-                  <Font size="15.0" />
+                  <Font name="Centaur" size="24.0" />
                </font>
-            </Text>
+            </Label>
          </children>
       </VBox>
    </children>
