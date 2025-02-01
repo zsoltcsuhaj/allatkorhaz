@@ -16,7 +16,7 @@
             <TableColumn fx:id="kezelesekColumn" prefWidth="230.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Kezelések" />
             <TableColumn fx:id="orvosColumn" minWidth="0.0" prefWidth="122.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Orvos" />
             <TableColumn fx:id="datumColumn" prefWidth="159.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Dátum" />
-            <TableColumn fx:id="leirasColumn" prefWidth="288.0" style="-fx-background-color: #9EDE8B;" text="Leírás" />
+            <TableColumn fx:id="leirasColumn" prefWidth="288.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Leírás" />
          </columns>
       </TableView>
    <Label alignment="TOP_CENTER" minWidth="220.0" prefHeight="17.0" prefWidth="142.0" text="Kezelések az elmúlt hónapban:">

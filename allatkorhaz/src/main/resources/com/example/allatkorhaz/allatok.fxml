@@ -21,7 +21,7 @@
                   <TableColumn fx:id="szuletesiDatumColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Születési Dátum" />
                <TableColumn fx:id="gazdiNeveColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Gazdi Neve" />
                   <TableColumn fx:id="gazdiElerhetosegeColumn" minWidth="0.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Gazdi Elérhetősége" />
-               <TableColumn fx:id="orvosiElozmenyekColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Orvosi Előzmények" />
+               <TableColumn fx:id="orvosiElozmenyekColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Orvosi Előzmények" />
                </columns>
             </TableView>
         </children>

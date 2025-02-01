@@ -8,6 +8,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -74,6 +75,7 @@ public class AllatokController {
 
                 {
                     text.wrappingWidthProperty().bind(orvosiElozmenyekColumn.widthProperty().subtract(10));
+                    text.setTextAlignment(TextAlignment.CENTER);
                 }
 
                 @Override

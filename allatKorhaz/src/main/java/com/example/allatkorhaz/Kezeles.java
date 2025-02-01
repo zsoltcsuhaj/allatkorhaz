@@ -7,18 +7,16 @@ public class Kezeles {
     private String allatorvosNeve;
     private Date datum;
     private String megjegyzes;
-    private String allatNev; // Az állat neve
+    private String allatNev;
 
-    // A konstruktor módosítása
     public Kezeles(String kezelesTipusa, String allatNev, String allatorvosNeve, Date datum, String megjegyzes) {
-        this.kezelesTipusa = kezelesTipusa;
-        this.allatNev = allatNev;  // Beállítjuk az állat nevét
-        this.allatorvosNeve = allatorvosNeve;
-        this.datum = datum;
-        this.megjegyzes = megjegyzes;
+        setKezelesTipusa(kezelesTipusa);
+        setAllatNev(allatNev);
+        setAllatorvosNeve(allatorvosNeve);
+        setDatum(datum);
+        setMegjegyzes(megjegyzes);
     }
 
-    // Getter és setter metódusok
     public String getAllatNev() {
         return allatNev;
     }
@@ -28,7 +26,7 @@ public class Kezeles {
     }
 
     public String getKezelesekOsszesitve() {
-        return allatNev + " - " + kezelesTipusa; // Összefűzve az állat neve és a kezelés típusa
+        return allatNev + " - " + kezelesTipusa;
     }
 
     public String getAllatorvosNeve() {
@@ -41,5 +39,25 @@ public class Kezeles {
 
     public String getMegjegyzes() {
         return megjegyzes;
+    }
+
+    public void setKezelesTipusa(String kezelesTipusa) {
+        this.kezelesTipusa = kezelesTipusa;
+    }
+
+    public void setAllatorvosNeve(String allatorvosNeve) {
+        this.allatorvosNeve = allatorvosNeve;
+    }
+
+    public void setDatum(Date datum) {
+        this.datum = datum;
+    }
+
+    public void setMegjegyzes(String megjegyzes) {
+        this.megjegyzes = megjegyzes;
+    }
+
+    public void setAllatNev(String allatNev) {
+        this.allatNev = allatNev;
     }
 }

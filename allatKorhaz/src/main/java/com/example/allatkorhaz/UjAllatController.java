@@ -107,6 +107,7 @@ public class UjAllatController {
             }
         }
     }
+
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Hiba");

@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -45,7 +44,7 @@ public class LegjobbOrvosController {
 
                 orvosNeveText.setText(nev);
                 orvosSzakTeruletText.setText(szakTerulet);
-                kezeleseinekSzama.setText("Kezeléseinek száma: "+kezelesekSzama);
+                kezeleseinekSzama.setText("Kezeléseinek száma: " + kezelesekSzama);
             } else {
                 orvosNeveText.setText("Nincs adat");
                 orvosSzakTeruletText.setText("Nincs adat");

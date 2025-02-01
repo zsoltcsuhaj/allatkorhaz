@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.ElmultHetController">
+    <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="800.0">
+        <children>
+            <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Elmúlt hét kezelései" textAlignment="CENTER">
+                <font>
+                    <Font size="36.0" />
+                </font>
+            </Text>
+            <TableView fx:id="EHtableView" prefHeight="520.0" prefWidth="800.0">
+                <columns>
+                    <TableColumn fx:id="EHnevColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Név" />
+                    <TableColumn fx:id="EHfajColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Faj" />
+                    <TableColumn fx:id="EHszuletesiDatumColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Születési Dátum" />
+                    <TableColumn fx:id="EHgazdiNeveColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Gazdi Neve" />
+                    <TableColumn fx:id="EHkezelesDatumaColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Kezelés Dátuma" />
+                    <TableColumn fx:id="EHkezelesTipusaColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Kezelés Típusa" />
+                </columns>
+            </TableView>
+        </children>
+        <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </VBox.margin>
+    </VBox>
+</StackPane>

@@ -11,11 +11,12 @@
                 <MenuItem fx:id="ujAllatMenuItem" onAction="#handleUjAllat" text="Állat rögzítése" />
             </Menu>
             <Menu text="Kezelések">
-                <MenuItem fx:id="kezelesKeresesMenuItem" onAction="#handleKezelesTipusai" text="Kezelések keresése" />
+                <MenuItem fx:id="kezelesKeresesMenuItem" onAction="#handleKezelesTipusai" text="Kezelések listája" />
                 <MenuItem fx:id="kontrollVizsgalatMenuItem" onAction="#handleKezelesHozzaadasa" text="Kezelés hozzáadása" />
             </Menu>
             <Menu text="Statisztika">
                 <MenuItem fx:id="legjobbAllatorvosMenuItem" onAction="#handleLegjobbAllatorvos" text="Legjobb állatorvos" />
+                <MenuItem fx:id="kezelesTipusValasztas" onAction="#handleKezelesTipusValasztas" text="Elmúlt hét kezelései" />
             </Menu>
         </MenuBar>
     </top>

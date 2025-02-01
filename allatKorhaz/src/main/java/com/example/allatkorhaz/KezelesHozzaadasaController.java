@@ -127,7 +127,7 @@ public class KezelesHozzaadasaController {
 
         try {
             Integer allatId = getAllatId(allatNev);
-            Integer orvosId = getAllatorvosId(orvosNev); // Most már csak a tiszta névvel keresünk
+            Integer orvosId = getAllatorvosId(orvosNev);
 
             if (allatId == null) {
                 showError("A kiválasztott állat nem található az adatbázisban!");

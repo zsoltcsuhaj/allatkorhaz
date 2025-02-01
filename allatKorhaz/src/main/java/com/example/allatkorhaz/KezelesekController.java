@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 
 import java.sql.*;
 
@@ -140,6 +141,7 @@ public class KezelesekController {
 
                 {
                     text.wrappingWidthProperty().bind(leirasColumn.widthProperty().subtract(10));
+                    text.setTextAlignment(TextAlignment.CENTER);
                 }
 
                 @Override
