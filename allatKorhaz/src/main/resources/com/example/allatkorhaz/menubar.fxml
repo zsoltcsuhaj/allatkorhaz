@@ -12,7 +12,7 @@
             </Menu>
             <Menu text="Kezelések">
                 <MenuItem fx:id="kezelesKeresesMenuItem" onAction="#handleKezelesTipusai" text="Kezelések keresése" />
-                <MenuItem fx:id="kontrollVizsgalatMenuItem" onAction="#handleKontrollVizsgalat" text="Kontroll vizsgálatok" />
+                <MenuItem fx:id="kontrollVizsgalatMenuItem" onAction="#handleKezelesHozzaadasa" text="Kezelés hozzáadása" />
             </Menu>
             <Menu text="Statisztika">
                 <MenuItem fx:id="legjobbAllatorvosMenuItem" onAction="#handleLegjobbAllatorvos" text="Legjobb állatorvos" />

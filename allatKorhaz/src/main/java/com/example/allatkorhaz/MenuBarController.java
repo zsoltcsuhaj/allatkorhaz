@@ -60,6 +60,4 @@ public class MenuBarController implements IViews{
         loadView(ALLATOK);
     }
 
-
-
 }

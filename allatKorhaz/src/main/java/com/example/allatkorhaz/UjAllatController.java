@@ -61,32 +61,25 @@ public class UjAllatController {
         boolean ok = true;
 
         if (!isCorrectData(nev, 32)) {
-            Alert alertNemJo = new Alert(Alert.AlertType.ERROR, "Hibás név!");
-            alertNemJo.show();
+            showError("Hibás név!");
             ok = false;
         } else if (!isCorrectData(fajta, 32)) {
-            Alert alertNemJo = new Alert(Alert.AlertType.ERROR, "Hibás fajta!");
-            alertNemJo.show();
+            showError("Hibás fajta!");
             ok = false;
         } else if (!isCorrectData(fajtajelleg, 32)) {
-            Alert alertNemJo = new Alert(Alert.AlertType.ERROR, "Hibás fajtajelleg!");
-            alertNemJo.show();
+            showError("Hibás fajtajelleg!");
             ok = false;
         } else if (selectedDate == null) {
-            Alert alertNemJo = new Alert(Alert.AlertType.ERROR, "Hibás dátum!");
-            alertNemJo.show();
+            showError("Hibás dátum!");
             ok = false;
         } else if (!isCorrectData(gnev, 32)) {
-            Alert alertNemJo = new Alert(Alert.AlertType.ERROR, "Hibás gazdi név!");
-            alertNemJo.show();
+            showError("Hibás gazdi név!");
             ok = false;
         } else if (!isCorrectMedicalHistory(elozmeny, 500)) {
-            Alert alertNemJo = new Alert(Alert.AlertType.ERROR, "Hibás orvosi előzmény!");
-            alertNemJo.show();
+            showError("Hibás orvosi előzmény!");
             ok = false;
         } else if (!gtel.matches("([\\+](36)(20|30|70|50)\\d{7})|((06)\\d{9})")) {
-            Alert alertNemJo = new Alert(Alert.AlertType.ERROR, "Hibás telefonszám!");
-            alertNemJo.show();
+            showError("Hibás telefonszám!");
             ok = false;
         }
 
@@ -106,15 +99,27 @@ public class UjAllatController {
 
                 pstmt.executeUpdate();
 
-                Alert alertJo = new Alert(Alert.AlertType.INFORMATION, "Állat sikeresen hozzáadva!");
-                alertJo.show();
+                showInfo("Állat sikeresen hozzáadva!");
                 MenuBarController.getInstance().handleAllatok();
 
             } catch (SQLException e) {
-                System.out.println("Adatbázis hiba: " + e.getMessage());
-                Alert alertHiba = new Alert(Alert.AlertType.ERROR, "Adatbázis hiba történt: " + e.getMessage());
-                alertHiba.show();
+                showError("Adatbázis hiba történt: " + e.getMessage());
             }
         }
+    }
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Hiba");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void showInfo(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Információ");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

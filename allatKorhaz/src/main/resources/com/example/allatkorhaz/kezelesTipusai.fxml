@@ -5,31 +5,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.HelloController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allatkorhaz.KezelesekController">
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-         <children>
-            <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Állat kezelésének típusa" textAlignment="CENTER">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Text>
-            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Elmult hóbapoban végzett kezelések: " wrappingWidth="204.224609375" />
-                  <TextField editable="false" style="-fx-background-color: none;" />
-               </children>
-            </HBox>
-         </children>
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
       </VBox>
-      <TableView prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+      <TableView fx:id="kezelesekTable" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
          <columns>
-            <TableColumn prefWidth="230.0" style="-fx-background-color: #9EDE8B;" text="Kezelések" />
-            <TableColumn minWidth="0.0" prefWidth="122.0" style="-fx-background-color: #9EDE8B;" text="Orvos" />
-            <TableColumn prefWidth="159.0" style="-fx-background-color: #9EDE8B;" text="Dátum" />
-            <TableColumn prefWidth="288.0" style="-fx-background-color: #9EDE8B;" text="Leírás" />
+            <TableColumn fx:id="kezelesekColumn" prefWidth="230.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Kezelések" />
+            <TableColumn fx:id="orvosColumn" minWidth="0.0" prefWidth="122.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Orvos" />
+            <TableColumn fx:id="datumColumn" prefWidth="159.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Dátum" />
+            <TableColumn fx:id="leirasColumn" prefWidth="288.0" style="-fx-background-color: #9EDE8B;" text="Leírás" />
          </columns>
       </TableView>
+   <Label alignment="TOP_CENTER" minWidth="220.0" prefHeight="17.0" prefWidth="142.0" text="Kezelések az elmúlt hónapban:">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <StackPane.margin>
+         <Insets right="590.0" top="450.0" />
+      </StackPane.margin>
+   </Label>
+   <Label fx:id="elmultHonapKezelesek">
+      <StackPane.margin>
+         <Insets right="380.0" top="450.0" />
+      </StackPane.margin>
+   </Label>
 </StackPane>
