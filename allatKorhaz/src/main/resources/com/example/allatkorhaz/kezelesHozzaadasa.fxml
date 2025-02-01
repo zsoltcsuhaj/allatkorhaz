@@ -25,54 +25,45 @@
                </Text>
                <HBox alignment="CENTER" prefHeight="212.0" prefWidth="794.0">
                   <children>
-                     <VBox alignment="CENTER_RIGHT" prefHeight="167.0" prefWidth="103.0" scaleShape="false" spacing="30.0">
-                        <children>
-                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Állat neve:" textAlignment="CENTER">
-                              <VBox.margin>
-                                 <Insets bottom="10.0" />
-                              </VBox.margin></Text>
-                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Állatorvos neve:" textAlignment="CENTER">
-                              <VBox.margin>
-                                 <Insets bottom="10.0" />
-                              </VBox.margin></Text>
-                           <Label text="Kezelés típusa:" />
-                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum:" textAlignment="CENTER">
-                              <VBox.margin>
-                                 <Insets />
-                              </VBox.margin></Text>
-                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés: " textAlignment="CENTER" />
-                        </children>
-                        <opaqueInsets>
-                           <Insets />
-                        </opaqueInsets>
-                     </VBox>
-                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="401.0" spacing="10.0">
-                        <children>
-                           <ComboBox fx:id="allatNevComboBox" prefHeight="25.0" prefWidth="397.0" promptText="Válasszon állatot!">
-                              <VBox.margin>
-                                 <Insets />
-                              </VBox.margin></ComboBox>
-                           <ComboBox fx:id="orvosNevComboBox" prefHeight="25.0" prefWidth="396.0" promptText="Válasszon állatorvost!">
-                              <VBox.margin>
-                                 <Insets top="15.0" />
-                              </VBox.margin>
-                           </ComboBox>
-                           <TextField fx:id="kezelesTipusaTextField">
-                              <VBox.margin>
-                                 <Insets top="35.0" />
-                              </VBox.margin>
-                           </TextField>
-                           <DatePicker fx:id="datumPicker" prefHeight="25.0" prefWidth="398.0">
-                              <VBox.margin>
-                                 <Insets top="10.0" />
-                              </VBox.margin>
-                           </DatePicker>
-                           <TextArea fx:id="megjegyzesTextArea" prefHeight="80.0" prefWidth="401.0" style="-fx-border-color: #9EDE8B; -fx-border-width: 3; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: none;" />
-                        </children>
-                        <HBox.margin>
-                           <Insets right="100.0" top="20.0" />
-                        </HBox.margin>
-                     </VBox>
+                     <GridPane alignment="CENTER" hgap="15" vgap="20">
+                        <columnConstraints>
+                           <ColumnConstraints halignment="RIGHT" minWidth="100" />
+                           <ColumnConstraints halignment="LEFT" minWidth="400" />
+                        </columnConstraints>
+
+                        <!-- Állat neve sor -->
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Állat neve:"
+                              GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="allatNevComboBox" prefHeight="25.0" prefWidth="397.0"
+                                  promptText="Válasszon állatot!"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <!-- Állatorvos neve sor -->
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Állatorvos neve:"
+                              GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="orvosNevComboBox" prefHeight="25.0" prefWidth="396.0"
+                                  promptText="Válasszon állatorvost!"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <!-- Kezelés típusa sor -->
+                        <Label text="Kezelés típusa:"
+                               GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="kezelesTipusaTextField" prefWidth="396.0"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <!-- Dátum sor -->
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum:"
+                              GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="datumPicker" prefHeight="25.0" prefWidth="398.0"
+                                    GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <!-- Megjegyzés sor -->
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés:"
+                              GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <TextArea fx:id="megjegyzesTextArea" prefHeight="80.0" prefWidth="401.0"
+                                  style="-fx-border-color: #9EDE8B; -fx-border-width: 3; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: none;"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </GridPane>
                   </children>
                   <padding>
                      <Insets top="10.0" />
@@ -82,10 +73,8 @@
                   <children>
                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="774.0" spacing="20.0">
                         <children>
-                           <Button fx:id="kezelesHozzaadas" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#kezelesHozzaadas" style="-fx-background-color: #9EDE8B;" text="Hozzáaadás">
-                              <VBox.margin>
-                                 <Insets left="350.0" top="80.0" />
-                              </VBox.margin>
+                           <Button fx:id="kezelesHozzaadas" alignment="BOTTOM_CENTER" mnemonicParsing="false"
+                                   onAction="#kezelesHozzaadas" style="-fx-background-color: #9EDE8B;" text="Hozzáaadás">
                               <padding>
                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                               </padding>
@@ -110,5 +99,4 @@
          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
       </VBox.margin>
    </VBox>
-
 </StackPane>

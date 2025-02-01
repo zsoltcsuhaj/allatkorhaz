@@ -36,10 +36,10 @@ public class ElmultHetController {
     }
 
     public void loadElmultHet(String kivalasztottKezeles) {
-        String query = "SELECT a.nev, a.faj, a.szuletesi_datum, a.gazdi_neve, k.datum, k.kezeles_tipusa " +
-                "FROM kezelesek k " +
-                "JOIN allat a ON k.allat_id = a.allat_id " +
-                "WHERE k.kezeles_tipusa = ? AND k.datum >= CURDATE() - INTERVAL 1 WEEK";
+        String query = "SELECT allat.nev, allat.faj, allat.szuletesi_datum, allat.gazdi_neve, kezelesek.datum, kezelesek.kezeles_tipusa " +
+                "FROM kezelesek" +
+                " JOIN allat ON kezelesek.allat_id = allat.allat_id " +
+                "WHERE kezelesek.kezeles_tipusa = ? AND kezelesek.datum >= CURDATE() - INTERVAL 1 WEEK GROUP BY allat.szuletesi_datum DESC";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {

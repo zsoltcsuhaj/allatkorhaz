@@ -10,6 +10,7 @@ public interface IViews {
     public static final String UJALLAT = "ujAllat.fxml";
     public static final String KEZELESTIPUSVALASZTAS="kezelesTipusValasztas.fxml";
     public static final String ELMULTHET="elmultHet.fxml";
+    public static final String EVVIZSGALAT="kontrollVizsgalat.fxml";
 
 
 

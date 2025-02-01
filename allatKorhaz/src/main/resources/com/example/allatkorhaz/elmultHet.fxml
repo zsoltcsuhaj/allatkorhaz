@@ -19,7 +19,7 @@
                     <TableColumn fx:id="EHfajColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Faj" />
                     <TableColumn fx:id="EHszuletesiDatumColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Születési Dátum" />
                     <TableColumn fx:id="EHgazdiNeveColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Gazdi Neve" />
-                    <TableColumn fx:id="EHkezelesDatumaColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Kezelés Dátuma" />
+                    <TableColumn fx:id="EHkezelesDatumaColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center; -fx-font-weight: bold;" text="Kezelés Dátuma" />
                     <TableColumn fx:id="EHkezelesTipusaColumn" minWidth="133.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Kezelés Típusa" />
                 </columns>
             </TableView>

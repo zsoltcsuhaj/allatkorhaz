@@ -1,5 +1,6 @@
 package com.example.allatkorhaz;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.StackPane;
@@ -95,5 +96,10 @@ public class MenuBarController implements IViews {
             ElmultHetController controller = (ElmultHetController) controllerObj;
             controller.loadElmultHet(kivalasztottKezeles);
         }
+    }
+
+    @FXML
+    public void handleEvVizsgalat() {
+        loadView(EVVIZSGALAT);
     }
 }

@@ -3,6 +3,7 @@ package com.example.allatkorhaz;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -26,6 +27,9 @@ public class AllatokController {
 
     @FXML
     public void initialize() {
+        tableView.setPlaceholder(new Label("Nincs megjelenítendő adat.") {{
+            setStyle("-fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
+        }});
         nevColumn.setCellValueFactory(new PropertyValueFactory<>("nev"));
         fajColumn.setCellValueFactory(new PropertyValueFactory<>("faj"));
         fajtajellegColumn.setCellValueFactory(new PropertyValueFactory<>("fajtajelleg"));
@@ -41,7 +45,7 @@ public class AllatokController {
 
 
     private void loadAllatok() {
-        String query = "SELECT nev, faj, fajtajelleg, szuletesi_datum, gazdi_neve, gazdi_elerhetosege, orvosi_elozmenyek FROM allat";
+        String query = "SELECT nev, faj, fajtajelleg, szuletesi_datum, gazdi_neve, gazdi_elerhetosege, orvosi_elozmenyek FROM allat GROUP BY szuletesi_datum DESC";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query);

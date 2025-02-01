@@ -31,6 +31,9 @@ public class KezelesekController {
 
     @FXML
     public void initialize() {
+        kezelesekTable.setPlaceholder(new Label("Nincs megjelenítendő adat.") {{
+            setStyle("-fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
+        }});
         initializeColumns();
         loadKezelesek();
         frissitKezelesekSzama();

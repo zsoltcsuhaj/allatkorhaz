@@ -17,6 +17,7 @@
             <Menu text="Statisztika">
                 <MenuItem fx:id="legjobbAllatorvosMenuItem" onAction="#handleLegjobbAllatorvos" text="Legjobb állatorvos" />
                 <MenuItem fx:id="kezelesTipusValasztas" onAction="#handleKezelesTipusValasztas" text="Elmúlt hét kezelései" />
+                <MenuItem fx:id="EvVizsgalat" onAction="#handleEvVizsgalat" text="1 éve nem vizsgált állatok" />
             </Menu>
         </MenuBar>
     </top>
