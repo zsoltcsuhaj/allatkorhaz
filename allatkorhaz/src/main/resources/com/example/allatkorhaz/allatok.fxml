@@ -16,11 +16,11 @@
           <TableView fx:id="tableView" prefHeight="520.0" prefWidth="800.0">
                <columns>
                   <TableColumn fx:id="nevColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Név" />
-                  <TableColumn fx:id="fajColumn" minWidth="0.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Faj" />
-                  <TableColumn fx:id="fajtajellegColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Fajtajelleg" />
-                  <TableColumn fx:id="szuletesiDatumColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Születési Dátum" />
-               <TableColumn fx:id="gazdiNeveColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Gazdi Neve" />
-                  <TableColumn fx:id="gazdiElerhetosegeColumn" minWidth="0.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Gazdi Elérhetősége" />
+                  <TableColumn fx:id="fajColumn" minWidth="0.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Faj" />
+                  <TableColumn fx:id="fajtajellegColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Fajtajelleg" />
+                  <TableColumn fx:id="szuletesiDatumColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Születési Dátum" />
+               <TableColumn fx:id="gazdiNeveColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Gazdi Neve" />
+                  <TableColumn fx:id="gazdiElerhetosegeColumn" minWidth="0.0" prefWidth="114.0" style="-fx-background-color: #9EDE8B; -fx-alignment: center;" text="Gazdi Elérhetősége" />
                <TableColumn fx:id="orvosiElozmenyekColumn" prefWidth="114.0" style="-fx-background-color: #9EDE8B;" text="Orvosi Előzmények" />
                </columns>
             </TableView>

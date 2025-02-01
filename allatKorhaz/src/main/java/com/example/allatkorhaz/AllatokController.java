@@ -3,9 +3,11 @@ package com.example.allatkorhaz;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,7 +25,6 @@ public class AllatokController {
 
     @FXML
     public void initialize() {
-        // Oszlopok beállítása
         nevColumn.setCellValueFactory(new PropertyValueFactory<>("nev"));
         fajColumn.setCellValueFactory(new PropertyValueFactory<>("faj"));
         fajtajellegColumn.setCellValueFactory(new PropertyValueFactory<>("fajtajelleg"));
@@ -32,18 +33,15 @@ public class AllatokController {
         gazdiElerhetosegeColumn.setCellValueFactory(new PropertyValueFactory<>("gazdiElerhetosege"));
         orvosiElozmenyekColumn.setCellValueFactory(new PropertyValueFactory<>("orvosiElozmenyek"));
 
-        // Adatok betöltése
+        setOrvosiElozmenyekCellFactory();
+
         loadAllatok();
     }
 
-    public void refreshTable() {
-        loadAllatok();
-    }
 
     private void loadAllatok() {
         String query = "SELECT nev, faj, fajtajelleg, szuletesi_datum, gazdi_neve, gazdi_elerhetosege, orvosi_elozmenyek FROM allat";
 
-        // Minden alkalommal új kapcsolatot nyitunk
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query);
              ResultSet rs = stmt.executeQuery()) {
@@ -65,8 +63,26 @@ public class AllatokController {
             tableView.setItems(allatokLista);
 
         } catch (SQLException e) {
-            e.printStackTrace();
-            // Itt érdemes lenne egy felhasználóbarát hibaüzenetet megjeleníteni
+            e.getMessage();
         }
+    }
+
+    private void setOrvosiElozmenyekCellFactory() {
+        orvosiElozmenyekColumn.setCellFactory(tc -> {
+            TableCell<Allat, String> cell = new TableCell<>() {
+                private final Text text = new Text();
+
+                {
+                    text.wrappingWidthProperty().bind(orvosiElozmenyekColumn.widthProperty().subtract(10));
+                }
+
+                @Override
+                protected void updateItem(String item, boolean empty) {
+                    text.setText(item);
+                    setGraphic(text);
+                }
+            };
+            return cell;
+        });
     }
 }

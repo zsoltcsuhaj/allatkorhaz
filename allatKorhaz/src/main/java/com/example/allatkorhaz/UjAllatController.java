@@ -7,7 +7,6 @@ import java.sql.*;
 import java.time.LocalDate;
 
 public class UjAllatController {
-    private Connection conn;
 
     @FXML
     private TextField allatNeve, allatFajtaja, allatFajtaJellege, gazdiNeve, gazdiTel;
@@ -97,7 +96,6 @@ public class UjAllatController {
             try (Connection conn = DatabaseConnection.getConnection();
                  PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-                // Prepared statement használata SQL injection ellen
                 pstmt.setString(1, nev);
                 pstmt.setString(2, fajta);
                 pstmt.setString(3, fajtajelleg);
