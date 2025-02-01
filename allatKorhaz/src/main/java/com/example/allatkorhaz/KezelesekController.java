@@ -84,7 +84,7 @@ public class KezelesekController {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Adatbázis hiba történt: "+e.getMessage());
         }
         return null;
     }
@@ -101,19 +101,18 @@ public class KezelesekController {
 
             while (rs.next()) {
                 int allatId = rs.getInt("allat_id");
-                String allatNev = getAllatNev(allatId); // Lekérdezzük az állat nevét
+                String allatNev = getAllatNev(allatId);
                 String kezelesTipusa = rs.getString("kezeles_tipusa");
                 int allatorvosId = rs.getInt("allatorvos_id");
                 String allatorvosNev = getAllatorvosNev(allatorvosId);
                 Date datum = rs.getDate("datum");
                 String megjegyzes = rs.getString("megjegyzes");
 
-                // Az új Kezeles példányban az állat nevét és a kezelés típusát összefűzzük
                 kezelesLista.add(new Kezeles(kezelesTipusa, allatNev, allatorvosNev, datum, megjegyzes));
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Adatbázis hiba történt: "+e.getMessage());
         }
     }
 

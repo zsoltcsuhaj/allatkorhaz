@@ -65,7 +65,7 @@ public class KezelesTipusValasztasController {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Adatbázis hiba történt: "+e.getMessage());
         }
         return false;
     }

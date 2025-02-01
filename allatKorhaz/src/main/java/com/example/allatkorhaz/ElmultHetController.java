@@ -66,7 +66,7 @@ public class ElmultHetController {
             EHtableView.setItems(elmultHetLista);
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Adatbázis hiba történt: "+e.getMessage());
         }
     }
 

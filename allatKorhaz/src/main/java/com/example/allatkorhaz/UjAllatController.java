@@ -111,15 +111,15 @@ public class UjAllatController {
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Hiba");
-        alert.setHeaderText(null);
+        alert.setHeaderText("Sikertelen feltöltés!");
         alert.setContentText(message);
         alert.showAndWait();
     }
 
     private void showInfo(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Információ");
-        alert.setHeaderText(null);
+        alert.setTitle("Siker!");
+        alert.setHeaderText("Sikeres feltöltés!");
         alert.setContentText(message);
         alert.showAndWait();
     }

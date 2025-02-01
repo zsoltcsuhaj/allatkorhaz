@@ -68,7 +68,7 @@ public class AllatokController {
             tableView.setItems(allatokLista);
 
         } catch (SQLException e) {
-            e.getMessage();
+            System.out.println("Adatbázis hiba történt: "+e.getMessage());
         }
     }
 

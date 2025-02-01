@@ -87,7 +87,7 @@ public class EvVizsgalatController {
             EvTableView.setItems(evLista);
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Adatbázis hiba történt: "+e.getMessage());
         }
     }
 }

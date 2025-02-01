@@ -52,8 +52,7 @@ public class LegjobbOrvosController {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
-            orvosNeveText.setText("Hiba történt!");
+            System.out.println("Adatbázis hiba történt: "+e.getMessage());
         }
     }
 }
