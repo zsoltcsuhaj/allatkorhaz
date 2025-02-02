@@ -46,7 +46,7 @@ public class KezelesTipusValasztasController {
                 showNoDataAlert();
             }
         } else {
-            showNoDataAlert();
+            showNoKezelesChosen();
         }
     }
 
@@ -75,6 +75,13 @@ public class KezelesTipusValasztasController {
         alert.setTitle("Nincs elérhető adat");
         alert.setHeaderText("Nincs megjeleníthető kezelés");
         alert.setContentText("A kiválasztott kezelés típusával kapcsolatban nincs adat az elmúlt hétre vonatkozóan.");
+        alert.showAndWait();
+    }
+    private void showNoKezelesChosen() {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Nincs elérhető adat");
+        alert.setHeaderText("Nincs megjeleníthető kezelés");
+        alert.setContentText("Nincs kiválasztva kezelés!");
         alert.showAndWait();
     }
 }

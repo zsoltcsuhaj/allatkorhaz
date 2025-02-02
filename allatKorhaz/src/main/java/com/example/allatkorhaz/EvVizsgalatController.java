@@ -56,12 +56,12 @@ public class EvVizsgalatController {
     private void loadEvVizsgalat() {
         String query = """
                 SELECT * FROM (
-                    SELECT a.nev, a.faj, a.szuletesi_datum, a.gazdi_neve,
-                           a.gazdi_elerhetosege,
-                           COALESCE(MAX(k.datum), 'Nem volt még kezelésen') AS legutobbi_vizsgalat
-                    FROM allat a
-                    LEFT JOIN kezelesek k ON a.allat_id = k.allat_id
-                    GROUP BY a.allat_id
+                    SELECT allat.nev, allat.faj, allat.szuletesi_datum, allat.gazdi_neve,
+                           allat.gazdi_elerhetosege,
+                           COALESCE(MAX(kezelesek.datum), 'Nem volt még kezelésen') AS legutobbi_vizsgalat
+                    FROM allat 
+                    LEFT JOIN kezelesek ON allat.allat_id = kezelesek.allat_id
+                    GROUP BY allat.szuletesi_datum DESC
                 ) AS sub
                 WHERE legutobbi_vizsgalat = 'Nem volt még kezelésen' 
                    OR legutobbi_vizsgalat < DATE_SUB(CURDATE(), INTERVAL 1 YEAR)

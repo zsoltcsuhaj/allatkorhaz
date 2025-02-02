@@ -24,6 +24,16 @@ public class KezelesHozzaadasaController {
 
     public void initialize() {
         try {
+            datumPicker.setDayCellFactory(picker -> new DateCell() {
+                @Override
+                public void updateItem(LocalDate item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (item.isAfter(LocalDate.now())) {
+                        setDisable(true);
+                        setStyle("-fx-background-color: #ffc0cb;");
+                    }
+                }
+            });
             feltoltAllatokComboBox();
             feltoltOrvosokComboBox();
             datumPicker.setValue(LocalDate.now());

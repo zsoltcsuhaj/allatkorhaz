@@ -17,6 +17,7 @@ public class UjAllatController {
 
     public boolean isString(String data) {
         if (!Character.isUpperCase(data.charAt(0))) {
+            showError("Nagybetűvel kell kezdődjön!");
             return false;
         }
         for (int i = 1; i < data.length(); i++) {
@@ -45,9 +46,19 @@ public class UjAllatController {
         data = data.trim();
         return !data.isEmpty() && data.length() <= size;
     }
-
-    public void initialize() {
+    public void initialize(){
+        szulDatum.setDayCellFactory(picker -> new DateCell() {
+            @Override
+            public void updateItem(LocalDate item, boolean empty) {
+                super.updateItem(item, empty);
+                if (item.isAfter(LocalDate.now())) {
+                    setDisable(true);
+                    setStyle("-fx-background-color: #ffc0cb;");
+                }
+            }
+        });
     }
+
 
     public void hozzaadas() {
         String nev = allatNeve.getText();
